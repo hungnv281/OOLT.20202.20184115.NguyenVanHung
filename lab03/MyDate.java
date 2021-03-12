@@ -45,7 +45,7 @@ public class MyDate {
 	
 	public String accept() {
 		Scanner input =  new Scanner(System.in);
-		System.out.println("nhap vao ngay chuoi~ : ");
+		System.out.println("nhap vao chuoi~ string : ");
 		this.string = input.nextLine();
 		string = string.replaceAll("\\s\\s+", " ");
 		string = string.trim();
