@@ -23,6 +23,12 @@ public class Order {
             itemsOrdered.add(media);
         }
     }
+    
+    public void removeMedia(int id) {
+        //
+        itemsOrdered.remove(id);
+    }
+    
     public void removeMedia() {
         String title;
         if (itemsOrdered.size() == 0) {
@@ -76,6 +82,7 @@ public class Order {
                         System.out.println("maximum " + MAX_NUMBERS_ORDERED + " products in 1 ordered");
                     }
                 }
+                break;
                //return book;
             case 2:
                 
@@ -109,6 +116,7 @@ public class Order {
                     default:
                         break;
                 }
+                break;
             case 3:
             	
                 System.out.print("Title: ");
@@ -154,6 +162,7 @@ public class Order {
                     default:
                         break;
                 }
+                break;
                 //return compactDisc;
             default:
                 System.out.println("Input error");

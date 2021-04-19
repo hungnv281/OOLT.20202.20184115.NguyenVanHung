@@ -24,24 +24,7 @@ public class CompactDisc extends Disc implements Playable{
 	        Track track = new Track(title,length);
 	        tracks.add(track);
 	    }
-//	public void addTrack() {
-//		Scanner input = new Scanner(System.in);
-//		String ttitle = input.nextLine();
-//		String tcategory = input.nextLine();
-//		float tcost = input.nextFloat();
-//		String tartist = input.nextLine();
-//		
-//		for (int i = 0 ; i < tracks.size() ;i++) {
-//			if (tracks.get(i).getTitle().equals(ttitle)) {
-//				return ;
-//				
-//			}
-//		}
-//		CompactDisc newCompactDisc = new CompactDisc(ttitle,tcategory, tcost, tartist, tracks);
-//		
-//		tracks.add(newCompactDisc);
-//	}
-//	
+
 	public void addTrack(Track track ) {
 		for (int i = 0 ; i < tracks.size() ;i++ ) {
 			if (tracks.get(i).getTitle().equals(track.getTitle())) {

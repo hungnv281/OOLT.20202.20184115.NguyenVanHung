@@ -8,7 +8,7 @@ import hust.soict.hedspi.aims.order.Order;
 
 public class Aims {
 	public static void showMenu() {
-		System.out.println(" Order Management Application : ");
+		System.out.println("Order Management Application : ");
         System.out.println("-------------------------------");
         System.out.println("1.Create new order");
         System.out.println("2.Add item to the order");
@@ -23,10 +23,11 @@ public class Aims {
    
         int i = 0;
         ArrayList<Order> orders = new ArrayList<Order>();
+        int choose;
         do{
         	showMenu();
         	Scanner input = new Scanner(System.in);
-        	int choose = input.nextInt();
+        	choose = input.nextInt();
         	Order order1 = new Order();
         	switch (choose) {
         		case 1: 
@@ -36,7 +37,6 @@ public class Aims {
                      i++;
                      orders.add(order1);
                      System.out.println("Created new order");
-
                      break;
         		case 2:
         			orders.get(i-1).addMedia();
@@ -45,7 +45,7 @@ public class Aims {
         			System.out.println("input id of item : ");
         			int id = input.nextInt();
         			if (orders.contains(orders.get(id))) {
-        				orders.get(i-1).removeMedia();
+        				orders.get(i-1).removeMedia(id);
         			}
         			break;
         		case 4: 
@@ -54,12 +54,13 @@ public class Aims {
                     orders.get(i - 1).printOrdered();
                     break;
         		case 0 : 
+        			System.out.println("Exited !!! ");
         			break;
         		default :
-        			System.out.println("khong hop le ! nhap lại !");
+        			System.out.println("\n\nkhong hop le ! nhap lại !\n\n");
         			break;
         	}
-        } while (i !=  0);
+        } while (choose !=  0);
        }
 }
 
